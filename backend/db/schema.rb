@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2026_09_12_201947) do
+ActiveRecord::Schema[7.2].define(version: 2026_09_12_214608) do
   create_table "appointment_types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -26,6 +26,9 @@ ActiveRecord::Schema[7.2].define(version: 2026_09_12_201947) do
     t.datetime "ends_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "location"
+    t.text "people_of_interest"
     t.index ["appointment_type_id"], name: "index_appointments_on_appointment_type_id"
   end
 

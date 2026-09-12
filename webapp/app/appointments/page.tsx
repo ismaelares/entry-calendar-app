@@ -1,10 +1,22 @@
-export default function AppointmentsPage() {
+import { appointmentsService } from "../services/appointments.service";
+import { appointmentTypesService } from "../services/appointmentsTypes.service";
+
+import AppointmentsManager from "./appointmentManager";
+
+export default async function AppointmentsPage() {
+  const [appointments, appointmentTypes] = await Promise.all([
+    appointmentsService.getAll(),
+    appointmentTypesService.getAll(),
+  ]);
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="text-4xl font-bold mb-4">Appointments Page</h1>
-      <p className="text-lg text-gray-600">
-        This is the appointments page of the application.
-      </p>
-    </div>
+    <main className="min-h-screen bg-white-50 p-6">
+      <div className="mx-auto max-w-7xl">
+        <AppointmentsManager
+          initialAppointments={appointments}
+          appointmentTypes={appointmentTypes}
+        />
+      </div>
+    </main>
   );
 }
