@@ -1809,3 +1809,241 @@ Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms (2 queries, 0 cached
 Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:56:17 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:56:17 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+Processing by AppointmentTypesController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  Parameters: {"appointment_type"=>{}}
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:57:03 +0000
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:57:03 +0000
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointmentType Load (0.5ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  Parameters: {"appointment"=>{}}
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  [1m[36mAppointment Load (1.0ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:57:50 +0000
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:57:50 +0000
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  Parameters: {"appointment"=>{}}
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  [1m[36mAppointment Load (0.0ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:58:07 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:58:07 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+Processing by AppointmentTypesController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  Parameters: {"appointment_type"=>{}}
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:58:16 +0000
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:58:16 +0000
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  Parameters: {"appointment"=>{}}
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  [1m[36mAppointment Load (0.0ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:58:26 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:58:26 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+Processing by AppointmentTypesController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  Parameters: {"appointment_type"=>{}}
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:58:32 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:58:32 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+Processing by AppointmentTypesController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  Parameters: {"appointment_type"=>{}}
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:58:46 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:58:46 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+Processing by AppointmentTypesController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  Parameters: {"appointment_type"=>{}}
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-12 23:59:19 +0000
+Started GET "/appointments" for 192.168.65.1 at 2026-09-12 23:59:19 +0000
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  Parameters: {"appointment"=>{}}
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  [1m[36mAppointment Load (0.0ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/appointments" for 192.168.65.1 at 2026-09-13 00:00:03 +0000
+Processing by AppointmentsController#create as HTML
+  Parameters: {"appointment"=>{"title"=>"RH", "description"=>"dataasd", "notes"=>"dadasd", "appointment_type_id"=>4, "starts_at"=>"2026-09-12T16:59", "ends_at"=>"2026-09-12T19:59", "location"=>"Room B", "people_of_interest"=>"Ismael Lares, Tobias Lares, Jhon DOE"}}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:20:in `create'
+  [1m[36mAppointmentType Load (3.2ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:20:in `create'
+  [1m[36mAppointment Create (0.3ms)[0m  [1m[32mINSERT INTO "appointments" ("description", "notes", "appointment_type_id", "starts_at", "ends_at", "created_at", "updated_at", "title", "location", "people_of_interest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["description", "dataasd"], ["notes", "dadasd"], ["appointment_type_id", 4], ["starts_at", "2026-09-12 16:59:00"], ["ends_at", "2026-09-12 19:59:00"], ["created_at", "2026-09-13 00:00:03.473843"], ["updated_at", "2026-09-13 00:00:03.473843"], ["title", "RH"], ["location", "Room B"], ["people_of_interest", "Ismael Lares, Tobias Lares, Jhon DOE"]]
+  ↳ app/controllers/appointments_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/appointments_controller.rb:20:in `create'
+Completed 201 Created in 46ms (Views: 1.6ms | ActiveRecord: 5.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 192.168.65.1 at 2026-09-13 00:01:23 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-13 00:01:23 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+Processing by AppointmentTypesController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  Parameters: {"appointment_type"=>{}}
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" IN (?, ?)[0m  [["id", 3], ["id", 4]]
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 7.4ms)
+
+
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 7.4ms)
+
+
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-13 00:01:29 +0000
+Started GET "/appointments" for 192.168.65.1 at 2026-09-13 00:01:29 +0000
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointmentType Load (0.0ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  Parameters: {"appointment"=>{}}
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+  [1m[36mAppointment Load (0.0ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" IN (?, ?)[0m  [["id", 3], ["id", 4]]
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-13 00:01:34 +0000
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 192.168.65.1 at 2026-09-13 00:01:36 +0000
+Started GET "/appointment_types" for 192.168.65.1 at 2026-09-13 00:01:36 +0000
+Processing by AppointmentsController#index as HTML
+  Parameters: {"appointment"=>{}}
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."starts_at" ASC[0m
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+  [1m[36mAppointmentType Load (0.5ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types" WHERE "appointment_types"."id" IN (?, ?)[0m  [["id", 3], ["id", 4]]
+  ↳ app/controllers/appointments_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by AppointmentTypesController#index as HTML
+  Parameters: {"appointment_type"=>{}}
+  [1m[36mAppointmentType Load (0.1ms)[0m  [1m[34mSELECT "appointment_types".* FROM "appointment_types"[0m
+  ↳ app/controllers/appointment_types_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+

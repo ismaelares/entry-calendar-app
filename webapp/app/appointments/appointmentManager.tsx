@@ -29,7 +29,23 @@ export default function AppointmentsManager({
 
   const [deletingId, setDeletingId] = useState<number | null>(null);
 
+  const [searchTerm, setSearchTerm] = useState("");
+
   const [error, setError] = useState<string | null>(null);
+
+  const filteredAppointments = appointments.filter((appointment) => {
+    const search = searchTerm.trim().toLowerCase();
+
+    if (!search) {
+      return true;
+    }
+
+    return (
+      appointment.title.toLowerCase().includes(search) ||
+      appointment.description?.toLowerCase().includes(search) ||
+      appointment.notes?.toLowerCase().includes(search)
+    );
+  });
 
   const handleCreate = () => {
     setEditingAppointment(undefined);
@@ -45,14 +61,12 @@ export default function AppointmentsManager({
 
   const handleSuccess = (appointment: Appointment) => {
     if (editingAppointment) {
-      // Update existing appointment
       setAppointments((current) =>
         current.map((item) =>
           item.id === appointment.id ? appointment : item,
         ),
       );
     } else {
-      // Add new appointment
       setAppointments((current) => [...current, appointment]);
     }
 
@@ -125,7 +139,7 @@ export default function AppointmentsManager({
 
       {/* Form */}
       {showForm && (
-        <div className="rounded-lg border border-white-200  p-6 shadow-sm">
+        <div className="rounded-lg border border-gray-200  p-6 shadow-sm">
           <h2 className="mb-6 text-lg font-semibold text-white-900">
             {editingAppointment ? "Edit Appointment" : "Create Appointment"}
           </h2>
@@ -139,15 +153,50 @@ export default function AppointmentsManager({
         </div>
       )}
 
-      {/* Table */}
+      {/* Search and Table */}
       {!showForm && (
-        <AppointmentsTable
-          appointments={appointments}
-          appointmentTypes={appointmentTypes}
-          onEdit={handleEdit}
-          onDelete={handleDelete}
-          deletingId={deletingId}
-        />
+        <>
+          <div className="rounded-lg border border-gray-200  p-4 shadow-sm">
+            <div className="relative">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Search appointments..."
+                className="w-full rounded-md border border-gray-300 px-4 py-2.5 text-sm text-white-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-white-400 hover:text-white-600"
+                  aria-label="Clear search"
+                >
+                  ×
+                </button>
+              )}
+            </div>
+
+            <div className="mt-2 text-sm text-white-500">
+              {searchTerm
+                ? `${filteredAppointments.length} result${
+                    filteredAppointments.length !== 1 ? "s" : ""
+                  } found`
+                : `${appointments.length} appointment${
+                    appointments.length !== 1 ? "s" : ""
+                  }`}
+            </div>
+          </div>
+
+          <AppointmentsTable
+            appointments={filteredAppointments}
+            appointmentTypes={appointmentTypes}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+            deletingId={deletingId}
+          />
+        </>
       )}
     </div>
   );
