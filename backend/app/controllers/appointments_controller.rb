@@ -3,7 +3,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.includes(:appointment_type).order(:starts_at)
 
     render json: @appointments
   end
@@ -46,6 +46,6 @@ class AppointmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.require(:appointment).permit(:description, :notes, :appointment_type_id, :starts_at, :ends_at)
+      params.require(:appointment).permit(:title,:description, :notes, :appointment_type_id, :starts_at, :ends_at, :location, :people_of_interest)
     end
 end
