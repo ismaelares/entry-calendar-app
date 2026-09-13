@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f172a;
     --foreground: #ededed;
   }
 }
@@ -48,4 +48,18 @@ body {
   .animate-fade-in {
     animation: fade-in 0.3s ease-out both;
   }
+}
+
+.borders {
+  border-color: #334155;
+}
+
+.cards {
+  background-color: #1e293b;
+}
+.textPrimary {
+  color: #f8fafc;
+}
+.textSecondary {
+  color: #94a3b8;
 }
