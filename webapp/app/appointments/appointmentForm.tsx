@@ -109,11 +109,10 @@ export default function AppointmentForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Title */}
       <div>
         <label
           htmlFor="appointment-title"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Title
         </label>
@@ -126,10 +125,10 @@ export default function AppointmentForm({
           placeholder="e.g. Team meeting"
           disabled={loading}
           className="
-            w-full rounded-lg border border-gray-300
+            w-full rounded-lg border borders
             px-4 py-2.5 text-sm
-            text-white-900 outline-none transition
-            placeholder:text-white-400
+            textPrimary outline-none transition
+            placeholder:textSecondary
             focus:border-blue-500
             focus:ring-2 focus:ring-blue-500/20
             disabled:cursor-not-allowed
@@ -138,11 +137,10 @@ export default function AppointmentForm({
         />
       </div>
 
-      {/* Appointment Type */}
       <div>
         <label
           htmlFor="appointment-type"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Appointment Type
         </label>
@@ -153,9 +151,9 @@ export default function AppointmentForm({
           onChange={(event) => setAppointmentTypeId(event.target.value)}
           disabled={loading}
           className="
-            w-full rounded-lg border border-gray-300
+            w-full rounded-lg border borders
             px-4 py-2.5 text-sm
-            text-white-900 outline-none transition
+            textPrimary outline-none transition
             focus:border-blue-500
             focus:ring-2 focus:ring-blue-500/20
             disabled:cursor-not-allowed
@@ -172,12 +170,11 @@ export default function AppointmentForm({
         </select>
       </div>
 
-      {/* Date and Time */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
           <label
             htmlFor="appointment-start"
-            className="mb-2 block text-sm font-medium text-white-700"
+            className="mb-2 block text-sm font-medium textPrimary"
           >
             Start date & time
           </label>
@@ -189,9 +186,9 @@ export default function AppointmentForm({
             onChange={(event) => setStartsAt(event.target.value)}
             disabled={loading}
             className="
-              w-full rounded-lg border border-gray-300
+              w-full rounded-lg border borders
               px-4 py-2.5 text-sm
-              text-white-900 outline-none transition
+              textPrimary outline-none transition
               focus:border-blue-500
               focus:ring-2 focus:ring-blue-500/20
               disabled:cursor-not-allowed
@@ -203,7 +200,7 @@ export default function AppointmentForm({
         <div>
           <label
             htmlFor="appointment-end"
-            className="mb-2 block text-sm font-medium text-white-700"
+            className="mb-2 block text-sm font-medium textPrimary"
           >
             End date & time
           </label>
@@ -215,7 +212,7 @@ export default function AppointmentForm({
             onChange={(event) => setEndsAt(event.target.value)}
             disabled={loading}
             className="
-              w-full rounded-lg border border-gray-300
+              w-full rounded-lg border borders
               px-4 py-2.5 text-sm
               text-white-900 outline-none transition
               focus:border-blue-500
@@ -231,7 +228,7 @@ export default function AppointmentForm({
       <div>
         <label
           htmlFor="appointment-location"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Location
         </label>
@@ -244,10 +241,10 @@ export default function AppointmentForm({
           placeholder="e.g. Conference Room A"
           disabled={loading}
           className="
-            w-full rounded-lg border border-gray-300
+            w-full rounded-lg border borders
             px-4 py-2.5 text-sm
-            text-white-900 outline-none transition
-            placeholder:text-gray-400
+            textPrimary outline-none transition
+            placeholder:textSecondary
             focus:border-blue-500
             focus:ring-2 focus:ring-blue-500/20
             disabled:cursor-not-allowed
@@ -260,7 +257,7 @@ export default function AppointmentForm({
       <div>
         <label
           htmlFor="people-of-interest"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           People of Interest
         </label>
@@ -273,10 +270,10 @@ export default function AppointmentForm({
           placeholder="e.g. John Doe, Jane Smith"
           disabled={loading}
           className="
-            w-full rounded-lg border border-gray-300
+            w-full rounded-lg border borders
              px-4 py-2.5 text-sm
-            text-white-900 outline-none transition
-            placeholder:text-gray-400
+            textPrimary outline-none transition
+            placeholder:textSecondary
             focus:border-blue-500
             focus:ring-2 focus:ring-blue-500/20
             disabled:cursor-not-allowed
@@ -284,16 +281,14 @@ export default function AppointmentForm({
           "
         />
 
-        <p className="mt-1.5 text-xs text-white-500">
+        <p className="mt-1.5 text-xs textSecondary">
           Separate multiple people with commas.
         </p>
       </div>
-
-      {/* Description */}
       <div>
         <label
           htmlFor="appointment-description"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Description
         </label>
@@ -307,10 +302,10 @@ export default function AppointmentForm({
           disabled={loading}
           className="
             w-full resize-y rounded-lg
-            border border-gray-300
+            border borders
             px-4 py-2.5 text-sm
-            text-white-900 outline-none transition
-            placeholder:text-gray-400
+            textPrimary outline-none transition
+            placeholder:textSecondary
             focus:border-blue-500
             focus:ring-2 focus:ring-blue-500/20
             disabled:cursor-not-allowed
@@ -318,12 +313,10 @@ export default function AppointmentForm({
           "
         />
       </div>
-
-      {/* Notes */}
       <div>
         <label
           htmlFor="appointment-notes"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Notes
         </label>
@@ -337,10 +330,10 @@ export default function AppointmentForm({
           disabled={loading}
           className="
             w-full resize-y rounded-lg
-            border border-gray-300
+            border borders
             px-4 py-2.5 text-sm
             text-white-900 outline-none transition
-            placeholder:text-white-400
+            placeholder:textSecondary
             focus:border-blue-500
             focus:ring-2 focus:ring-blue-500/20
             disabled:cursor-not-allowed
@@ -348,8 +341,6 @@ export default function AppointmentForm({
           "
         />
       </div>
-
-      {/* Error */}
       {error && (
         <div
           role="alert"
@@ -362,12 +353,10 @@ export default function AppointmentForm({
           {error}
         </div>
       )}
-
-      {/* Actions */}
       <div
         className="
           flex justify-end gap-3
-          border-t border-gray-200 pt-5
+          border-t borders pt-5
         "
       >
         {onCancel && (

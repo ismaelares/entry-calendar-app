@@ -10,7 +10,7 @@ export default async function AppointmentsPage() {
   ]);
 
   return (
-    <main className="min-h-screen bg-white-50 p-6">
+    <main className="min-h-screen  p-6">
       <div className="mx-auto max-w-7xl">
         <AppointmentsManager
           initialAppointments={appointments}

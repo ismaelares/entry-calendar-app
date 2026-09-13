@@ -109,12 +109,11 @@ export default function AppointmentsManager({
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white-900">Appointments</h1>
+          <h1 className="text-2xl font-bold textPrimary">Appointments</h1>
 
-          <p className="mt-1 text-sm text-white-500">
+          <p className="mt-1 text-sm textSecondary">
             Manage your appointments.
           </p>
         </div>
@@ -130,17 +129,15 @@ export default function AppointmentsManager({
         )}
       </div>
 
-      {/* Error */}
       {error && (
         <div className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
           {error}
         </div>
       )}
 
-      {/* Form */}
       {showForm && (
-        <div className="rounded-lg border border-gray-200  p-6 shadow-sm">
-          <h2 className="mb-6 text-lg font-semibold text-white-900">
+        <div className="rounded-lg border borders p-6 shadow-sm cards">
+          <h2 className="mb-6 text-lg font-semibold textPrimary">
             {editingAppointment ? "Edit Appointment" : "Create Appointment"}
           </h2>
 
@@ -156,14 +153,14 @@ export default function AppointmentsManager({
       {/* Search and Table */}
       {!showForm && (
         <>
-          <div className="rounded-lg border border-gray-200  p-4 shadow-sm">
+          <div className="rounded-lg border borders p-4 shadow-sm cards">
             <div className="relative">
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
                 placeholder="Search appointments..."
-                className="w-full rounded-md border border-gray-300 px-4 py-2.5 text-sm text-white-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="w-full rounded-md border borders px-4 py-2.5 text-sm textPrimary outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
 
               {searchTerm && (
@@ -178,7 +175,7 @@ export default function AppointmentsManager({
               )}
             </div>
 
-            <div className="mt-2 text-sm text-white-500">
+            <div className="mt-2 text-sm textSecondary">
               {searchTerm
                 ? `${filteredAppointments.length} result${
                     filteredAppointments.length !== 1 ? "s" : ""

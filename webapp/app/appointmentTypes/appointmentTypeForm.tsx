@@ -71,11 +71,10 @@ export default function AppointmentTypeForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Name */}
       <div>
         <label
           htmlFor="appointment-type-name"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Name
         </label>
@@ -88,12 +87,12 @@ export default function AppointmentTypeForm({
           placeholder="e.g. Meeting"
           disabled={loading}
           className="
-            w-full rounded-lg border border-gray-300
+            w-full rounded-lg border borders
             px-4 py-2.5 text-sm
-            text-white-900
+            textPrimary
             outline-none
             transition
-            placeholder:text-gray-400
+            placeholder:textSecondary
             focus:border-blue-500
             focus:ring-2
             focus:ring-blue-500/20
@@ -102,12 +101,10 @@ export default function AppointmentTypeForm({
           "
         />
       </div>
-
-      {/* Color */}
       <div>
         <label
           htmlFor="appointment-type-color"
-          className="mb-2 block text-sm font-medium text-white-700"
+          className="mb-2 block text-sm font-medium textPrimary"
         >
           Color
         </label>
@@ -121,18 +118,18 @@ export default function AppointmentTypeForm({
             disabled={loading}
             className="
               h-11 w-16 cursor-pointer
-              rounded-lg border border-white-300
+              rounded-lg border borders
                p-1
               disabled:cursor-not-allowed
             "
           />
 
           <div
-            className="h-10 w-10 rounded-full border border-white-200 shadow-sm"
+            className="h-10 w-10 rounded-full border borders shadow-sm"
             style={{ backgroundColor: color }}
           />
 
-          <span className="font-mono text-sm uppercase text-gray-600">
+          <span className="font-mono text-sm uppercase textSecondary">
             {color}
           </span>
         </div>
@@ -143,7 +140,7 @@ export default function AppointmentTypeForm({
         <div
           role="alert"
           className="
-            rounded-lg border border-red-200
+            rounded-lg border borders
             bg-red-50 px-4 py-3
             text-sm text-red-700
           "
@@ -153,7 +150,7 @@ export default function AppointmentTypeForm({
       )}
 
       {/* Actions */}
-      <div className="flex justify-end gap-3 border-t border-gray-200 pt-5">
+      <div className="flex justify-end gap-3 border-t borders pt-5">
         {onCancel && (
           <button
             type="button"
@@ -181,7 +178,7 @@ export default function AppointmentTypeForm({
           className="
             rounded-lg bg-blue-600
             px-5 py-2.5
-            text-sm font-medium text-white
+            text-sm font-medium textPrimary
             shadow-sm
             transition
             hover:bg-blue-700

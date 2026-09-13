@@ -90,11 +90,11 @@ export default function AppointmentTypesManager({
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-white-900">
+          <h1 className="text-2xl font-semibold textPrimary">
             Appointment Types
           </h1>
 
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm textSecondary">
             Manage the types of appointments available.
           </p>
         </div>
@@ -131,8 +131,8 @@ export default function AppointmentTypesManager({
       )}
 
       {showForm && (
-        <div className="rounded-xl border border-white-200  p-6 shadow-sm">
-          <h2 className="mb-5 text-lg font-semibold text-white-900">
+        <div className="rounded-xl border borders cards  p-6 shadow-sm">
+          <h2 className="mb-5 text-lg font-semibold textPrimary">
             {editingAppointmentType
               ? "Edit Appointment Type"
               : "New Appointment Type"}
